@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Helpdesk | Campus Support</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">🎓</div>
+            <div>
+                <h2>Campus<span>Care</span></h2>
+                <p>STUDENT HELPDESK</p>
+            </div>
+        </div>
+
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-link active">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="#submit" class="nav-link">
+                <span>＋</span> Submit a Query
+            </a>
+
+            <a href="#dashboard" class="nav-link">
+                <span>☷</span> All Queries
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="support-card">
+                <div class="support-icon">💬</div>
+                <h3>Need assistance?</h3>
+                <p>We're here to help you with your campus queries.</p>
+                <a href="#submit">Get Support →</a>
+            </div>
+
+            <p class="sidebar-footer">DSA PROJECT · 2026</p>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div>
+                <p class="breadcrumb">CAMPUS / STUDENT PORTAL</p>
+                <h2>Student Helpdesk</h2>
+            </div>
+
+            <div class="topbar-right">
+                <div class="online-status">
+                    <span class="online-dot"></span>
+                    System Online
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar">A</div>
+                    <div>
+                        <strong>Student Portal</strong>
+                        <small>Campus User</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section">
+            <div>
+                <p class="welcome-label">YOUR CAMPUS, YOUR VOICE</p>
+                <h1>Welcome to <span>CampusCare.</span></h1>
+                <p class="welcome-text">
+                    Have a question or facing an issue? Submit your query
+                    and let our helpdesk team assist you.
+                </p>
+            </div>
+
+            <div class="welcome-decoration">✦</div>
+        </section>
+
+
+        <!-- DASHBOARD -->
+        <section class="dashboard-section" id="dashboard">
+
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">OVERVIEW</p>
+                    <h2>Helpdesk Overview</h2>
+                </div>
+                <span class="live-label">● LIVE STATISTICS</span>
+            </div>
+
+
+            <!-- STATISTICS -->
+            <div class="stats">
+
+                <div class="stat stat-total">
+                    <div class="stat-top">
+                        <span class="stat-icon">▤</span>
+                        <span class="stat-tag">ALL TIME</span>
+                    </div>
+                    <h3 id="total">0</h3>
+                    <p>Total Queries</p>
+                    <div class="stat-line"></div>
+                </div>
+
+                <div class="stat stat-pending">
+                    <div class="stat-top">
+                        <span class="stat-icon">◷</span>
+                        <span class="stat-tag">IN PROGRESS</span>
+                    </div>
+                    <h3 id="pending">0</h3>
+                    <p>Pending Queries</p>
+                    <div class="stat-line"></div>
+                </div>
+
+                <div class="stat stat-resolved">
+                    <div class="stat-top">
+                        <span class="stat-icon">✓</span>
+                        <span class="stat-tag">COMPLETED</span>
+                    </div>
+                    <h3 id="resolved">0</h3>
+                    <p>Resolved Queries</p>
+                    <div class="stat-line"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBMIT QUERY -->
+        <section class="content-card" id="submit">
+
+            <div class="card-heading">
+                <div class="heading-icon">✉</div>
+                <div>
+                    <p class="section-label">WE ARE LISTENING</p>
+                    <h2>Submit Your Query</h2>
+                    <p class="card-subtitle">
+                        Fill in the details below. Our team will look into your issue.
+                    </p>
+                </div>
+            </div>
+
+            <form id="queryForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="name">Student Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            maxlength="49"
+                            placeholder="Enter your full name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="roll">Roll Number</label>
+                        <input
+                            type="text"
+                            id="roll"
+                            maxlength="19"
+                            placeholder="Enter your roll number"
+                            required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="category">Query Category</label>
+                        <select id="category" required>
+                            <option value="">Choose a category</option>
+                            <option value="Academics">📚 Academics</option>
+                            <option value="Examination">📝 Examination</option>
+                            <option value="Fees">💳 Fees</option>
+                            <option value="Placements">💼 Placements</option>
+                            <option value="Technical">💻 Technical Support</option>
+                            <option value="Other">✦ Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="description">Query Description</label>
+                        <textarea
+                            id="description"
+                            rows="5"
+                            maxlength="199"
+                            placeholder="Describe your issue in detail..."
+                            required></textarea>
+                        <small class="input-hint">
+                            Please explain your problem clearly (maximum 199 characters).
+                        </small>
+                    </div>
+
+                </div>
+
+                <div class="form-bottom">
+                    <p>🔒 Your information is used for query management.</p>
+                    <button type="submit" class="submit-btn">
+                        Submit Query <span>→</span>
+                    </button>
+                </div>
+
+            </form>
+
+            <div id="message"></div>
+
+        </section>
+
+
+        <!-- QUERY MANAGEMENT -->
+        <section class="content-card query-section">
+
+            <div class="card-heading query-heading">
+                <div>
+                    <p class="section-label">MANAGE REQUESTS</p>
+                    <h2>Query Management</h2>
+                    <p class="card-subtitle">
+                        View, search and manage student queries.
+                    </p>
+                </div>
+
+                <div class="table-icon">▤</div>
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <div class="search-input">
+                    <span>⌕</span>
+                    <input
+                        type="number"
+                        id="search"
+                        placeholder="Search by Query ID...">
+                </div>
+
+                <button onclick="searchQuery()" class="search-btn">
+                    Search
+                </button>
+
+                <button onclick="loadQueries()" class="show-all-btn">
+                    ↻ Show All
+                </button>
+
+            </div>
+
+
+            <!-- TABLE -->
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>QUERY ID</th>
+                            <th>STUDENT</th>
+                            <th>ROLL NUMBER</th>
+                            <th>CATEGORY</th>
+                            <th>DESCRIPTION</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="queryTable"></tbody>
+                </table>
+
+            </div>
+
+            <div class="table-footer">
+                <span>CampusCare · Student Support Management</span>
+                <span>Secure Campus Portal</span>
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="main-footer">
+            <p>© 2026 CampusCare Student Helpdesk System</p>
+            <p>Built with C Programming & Data Structures</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
